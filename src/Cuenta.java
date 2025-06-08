@@ -15,6 +15,12 @@ public class Cuenta {
         return saldo;
     }
 
+    /**
+    * Permite ingresar dinero a la cuenta del cliente
+    *
+    * @param cantidad Cantidad a ingresar (debe ser positiva)
+    * @return true si el ingreso se realizo correctamente, false si no
+    * */
     public boolean ingresar(double cantidad) {
         if (cantidad > 0) {
             saldo += cantidad;
