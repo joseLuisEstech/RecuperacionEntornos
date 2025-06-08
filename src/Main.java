@@ -6,7 +6,7 @@ public class Main {
         banco.agregarCliente("Bob", "222B", "Calle B", "CUENTA2");
 
         banco.getCliente("111A").ingresar(1000);
-        banco.getCliente("111A").sacar(200);
+        banco.getCliente("111A").retirarDinero(200);
         banco.traspasarDinero("111A", "222B", 300);
 
         banco.listarClientes();

@@ -10,21 +10,13 @@ public class Banco {
     }
 
     public boolean traspasarDinero(String dniOrigen, String dniDestino, double cantidad) {
-        Cliente origen = null;
-        Cliente destino = null;
-        for (Cliente c : clientes) {
-            if (c.dni.equals(dniOrigen)) {
-                origen = c;
-            }
-            if (c.dni.equals(dniDestino)) {
-                destino = c;
-            }
-        }
+        Cliente origen = buscarClientePorDNI(dniOrigen);
+        Cliente destino = buscarClientePorDNI(dniDestino);
 
         if (origen != null && destino != null) {
-            if (cantidad <= origen.saldo) {
-                origen.saldo -= cantidad;
-                destino.saldo += cantidad;
+            if (cantidad <= origen.getCuenta().getSaldo()) {
+                origen.getCuenta().sacar(cantidad);
+                destino.getCuenta().ingresar(cantidad);
                 System.out.println("Traspaso exitoso");
                 return true;
             } else {
@@ -38,7 +30,7 @@ public class Banco {
 
     public Cliente getCliente(String dni) {
         for (Cliente c : clientes) {
-            if (c.dni.equals(dni)) {
+            if (c.getDni().equals(dni)) {
                 return c;
             }
         }
@@ -49,5 +41,14 @@ public class Banco {
         for (Cliente c : clientes) {
             c.mostrarInformacion();
         }
+    }
+
+    private Cliente buscarClientePorDNI(String dni){
+        for (Cliente c : clientes){
+            if (c.getDni().equals(dni)){
+                return c;
+            }
+        }
+        return null;
     }
 }
