@@ -45,7 +45,7 @@ Se han implementado pruebas de:
 
 ## Cómo ejecutar el proyecto
 
-1. Clona el repositorio:
+1. Clona el repositorio: git clone https://github.com/joseLuisEstech/RecuperacionEntornos.git
 
 2. Abre el proyecto en IntelliJ.
 
