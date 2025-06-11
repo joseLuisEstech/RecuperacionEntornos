@@ -1,6 +1,8 @@
 /**
  * Clase que representa una cuenta bancaria.
  * Contiene un número de cuenta y el saldo.
+ *
+ * @author Jose Luis Rodriguez
  */
 
 public class Cuenta {

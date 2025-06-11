@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 /**
  * Clase que gestiona las operaciones bancarias entre clientes.
+ * @author Jose Luis Rodriguez
  */
 
 public class Banco {

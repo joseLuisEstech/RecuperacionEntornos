@@ -1,6 +1,7 @@
 /**
  * Clase que representa a un cliente del banco
  * Contiene sus datos personales y su cuenta bancaria
+ * @author Jose Luis Rodriguez
  */
 public class Cliente {
     private String nombre;
